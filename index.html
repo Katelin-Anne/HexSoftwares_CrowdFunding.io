@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crowdfunding Project</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #fff;
+            background-color: #4B0082;
+        }
+
+        /* Navbar */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #800080;
+            padding: 1rem;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #FFD700;
+            margin: 0 1rem;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 80vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(to bottom, #800080, #4B0082);
+        }
+
+        .hero h1 {
+            text-align: center;
+            font-size: 3rem;
+        }
+
+        .hero-slider {
+            width: 80%;
+            overflow: hidden;
+        }
+
+        .slider {
+            display: flex;
+            animation: slide 8s infinite;
+        }
+
+        .slider img {
+            width: 50%;
+            border-radius: 10px;
+        }
+
+        @keyframes slide {
+            0%, 25% { transform: translateX(0); }
+            50%, 75% { transform: translateX(-100%); }
+            100% { transform: translateX(-200%); }
+        }
+
+        .back-this-project {
+            margin: 2rem auto;
+            text-align: center;
+        }
+
+        .back-this-project button {
+            padding: 1rem 2rem;
+            background-color: #FFD700;
+            border: none;
+            border-radius: 5px;
+            color: #4B0082;
+            font-size: 1.2rem;
+            cursor: pointer;
+        }
+
+        .back-this-project button:hover {
+            background-color: #FFA500;
+        }
+
+        /* Money Container */
+        .money-container {
+            display: flex;
+            justify-content: space-around;
+            margin: 2rem 0;
+        }
+
+        .money-box {
+            text-align: center;
+            padding: 1rem;
+            border-radius: 10px;
+            background-color: #800080;
+        }
+
+        .money-box h3 {
+            font-size: 2rem;
+        }
+
+        .money-box p {
+            margin: 0.5rem 0;
+        }
+
+        /* Progress Bar */
+        .progress {
+            margin: 2rem auto;
+            width: 80%;
+            background: #FFD700;
+            height: 20px;
+            border-radius: 10px;
+            position: relative;
+        }
+
+        .progress-bar {
+            width: 70%;
+            background: #fff;
+            height: 100%;
+            border-radius: 10px;
+        }
+
+        /* About Section */
+        .about {
+            padding: 2rem;
+            background-color: #800080;
+        }
+
+        .about h2 {
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .projects {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .project {
+            background-color: #4B0082;
+            padding: 1rem;
+            border-radius: 10px;
+        }
+
+        .project img {
+            width:15%;
+            border-radius: 10px;
+            margin-bottom: 1rem;
+        }
+
+        .project h3 {
+            margin-bottom: 1rem;
+        }
+
+        .project p {
+            margin-bottom: 1rem;
+        }
+
+        .project button {
+            padding: 0.5rem 1rem;
+            background-color: #FFD700;
+            border: none;
+            border-radius: 5px;
+            color: #4B0082;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .project button:hover {
+            background-color: #FFA500;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav>
+        <div><a href="#">Crowdfunding</a></div>
+        <div>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#back">Get Started</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-slider">
+            <div class="slider">
+                <img src="https://i.postimg.cc/Gt7XMbrY/gbvposter.png" alt="Slide 1">
+                <img src="https://i.postimg.cc/MKHPnfbY/gbv2.jpg" alt="Slide 2">
+                <img src="https://i.postimg.cc/1tMBty8T/gbv5.jpg" alt="Slide 3">
+                <img src="https://i.postimg.cc/bJMLXpsj/camp1.jpg" alt="Slide 4">
+                <img src="https://i.postimg.cc/mrpyMB3F/gbv1.jpg" alt="Slide 5">
+                <img src="https://i.postimg.cc/66fT1zSM/gbv4.jpg" alt="Slide 6">
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Back This Project Button -->
+    <div class="back-this-project">
+        <button>Back This Project</button>
+    </div>
+
+    <!-- Money Container -->
+    <div class="money-container">
+        <div class="money-box">
+            <h3>R100,000</h3>
+            <p>Raised</p>
+        </div>
+        <div class="money-box">
+            <h3>200</h3>
+            <p>Total Backers</p>
+        </div>
+        <div class="money-box">
+            <h3>15 Days</h3>
+            <p>Remaining</p>
+        </div>
+    </div>
+
+    <!-- Progress Bar -->
+    <div class="progress">
+        <div class="progress-bar"></div>
+    </div>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <h2>About This Project</h2>
+        <p>This crowdfunding initiative is dedicated to supporting survivors of Gender-Based Violence (GBV) and funding programs that provide shelter, counseling, legal aid, and education. By backing this project, you contribute to a safer society where victims receive the necessary care and support to rebuild their lives.</p>
+
+        <div class="projects">
+            <div class="project">
+                <!--img src="https://i.postimg.cc/bJMLXpsj/camp1.jpg" alt="Project 1 Image"-->
+                <h3>Shelter Support</h3>
+                <p>Help us raise R100,000 to provide safe housing for GBV survivors.</p>
+                <button>Pledge Now</button>
+            </div>
+            <div class="project">
+                <!--img src="https://i.postimg.cc/mrpyMB3F/gbv1.jpg" alt="Project 2 Image"-->
+                <h3>Legal Aid</h3>
+                <p>We need R75,000 to offer legal assistance and justice for victims.</p>
+                <button>Pledge Now</button>
+            </div>
+            <div class="project">
+                <!--img src="https://i.postimg.cc/66fT1zSM/gbv4.jpg" alt="Project 3 Image"-->
+                <h3>Counseling Services</h3>
+                <p>Support our goal of R50,000 to provide therapy and mental health services.</p>
+                <button>Pledge Now</button>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
